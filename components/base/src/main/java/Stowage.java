@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Stowage {
 
     private ArrayList<Container> containerList;
