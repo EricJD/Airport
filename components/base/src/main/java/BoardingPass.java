@@ -4,7 +4,7 @@ public class BoardingPass {
     private Carrier carrier;
     private String flight;
     private Passenger passenger;
-    private TicketClass ticketclass;
+    private TicketClass ticketClass;
     private Source source;
     private Destination destination;
     private String date;
@@ -13,13 +13,13 @@ public class BoardingPass {
     private String seat;
 
     public BoardingPass(String id, Carrier carrier, String flight, Passenger passenger,
-                        TicketClass ticketclass, Source source, Destination destination,
+                        TicketClass ticketClass, Source source, Destination destination,
                         String date, String gate, String boardingTime, String seat) {
         this.id = id;
         this.carrier = carrier;
         this.flight = flight;
         this.passenger = passenger;
-        this.ticketclass = ticketclass;
+        this.ticketClass = ticketClass;
         this.source = source;
         this.destination = destination;
         this.date = date;
@@ -44,8 +44,8 @@ public class BoardingPass {
         return passenger;
     }
 
-    public TicketClass getTicketclass() {
-        return ticketclass;
+    public TicketClass getTicketClass() {
+        return ticketClass;
     }
 
     public Source getSource() {
@@ -88,8 +88,8 @@ public class BoardingPass {
         this.passenger = passenger;
     }
 
-    public void setTicketclass(TicketClass ticketclass) {
-        this.ticketclass = ticketclass;
+    public void setTicketClass(TicketClass ticketClass) {
+        this.ticketClass = ticketClass;
     }
 
     public void setSource(Source source) {
@@ -123,7 +123,7 @@ public class BoardingPass {
                 ", carrier=" + carrier +
                 ", flight='" + flight + '\'' +
                 ", passenger=" + passenger +
-                ", ticketclass=" + ticketclass +
+                ", ticketClass=" + ticketClass +
                 ", source=" + source +
                 ", destination=" + destination +
                 ", date='" + date + '\'' +

@@ -4,7 +4,7 @@ public class Container {
     private ContainerCategory category;
     private ContainerProfile profile;
     private String barCodeIDCategory;
-    private String qrCodeIDECategory;
+    private String qrCodeIDCategory;
     private int maximumNumberOfBaggages = 50;
 
     public Container(ContainerType type, String id, ContainerCategory category, ContainerProfile profile, String barCodeIDCategory, String qrCodeIDECategory, int maximumNumberOfBaggages) {
@@ -13,7 +13,7 @@ public class Container {
         this.category = category;
         this.profile = profile;
         this.barCodeIDCategory = barCodeIDCategory;
-        this.qrCodeIDECategory = qrCodeIDECategory;
+        this.qrCodeIDCategory = qrCodeIDECategory;
         this.maximumNumberOfBaggages = maximumNumberOfBaggages;
     }
 
@@ -58,11 +58,11 @@ public class Container {
     }
 
     public String getQrCodeIDECategory() {
-        return qrCodeIDECategory;
+        return qrCodeIDCategory;
     }
 
     public void setQrCodeIDECategory(String qrCodeIDECategory) {
-        this.qrCodeIDECategory = qrCodeIDECategory;
+        this.qrCodeIDCategory = qrCodeIDECategory;
     }
 
     public int getMaximumNumberOfBaggages() {
@@ -81,7 +81,7 @@ public class Container {
                 ", category=" + category +
                 ", profile=" + profile +
                 ", barCodeIDCategory='" + barCodeIDCategory + '\'' +
-                ", qrCodeIDECategory='" + qrCodeIDECategory + '\'' +
+                ", qrCodeIDECategory='" + qrCodeIDCategory + '\'' +
                 ", maximumNumberOfBaggages=" + maximumNumberOfBaggages +
                 '}';
     }

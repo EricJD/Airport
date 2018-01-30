@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class DestinationBox {
 
     private String barCode;
-    private ArrayList<Baggage> baggegeList;
+    private ArrayList<Baggage> baggageList;
 
     public String getBarCode() {
         return barCode;
@@ -14,18 +14,18 @@ public class DestinationBox {
     }
 
     public ArrayList<Baggage> getBaggegeList() {
-        return baggegeList;
+        return baggageList;
     }
 
     public void setBaggegeList(ArrayList<Baggage> baggegeList) {
-        this.baggegeList = baggegeList;
+        this.baggageList = baggegeList;
     }
 
     @Override
     public String toString() {
         return "DestinationBox{" +
                 "barCode='" + barCode + '\'' +
-                ", baggegeList=" + baggegeList +
+                ", baggegeList=" + baggageList +
                 '}';
     }
 }

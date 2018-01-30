@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class PassengerList {
 
     private ArrayList<Passenger> passengerList;
