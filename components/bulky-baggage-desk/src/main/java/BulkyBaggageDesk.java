@@ -1,3 +1,4 @@
+import java.lang.reflect.InvocationTargetException;
 import java.util.UUID;
 
 public class BulkyBaggageDesk implements IBulkyBaggageDesk {
@@ -32,6 +33,11 @@ public class BulkyBaggageDesk implements IBulkyBaggageDesk {
     }
 
     public void notifyGroundOperations(BulkyBaggageDeskReceipt bulkyBaggageDeskReceipt) {
-
+        Object groundOperationsPort = ComponentLoader.loadComponent("ground-operations-center", "GroundOperationsCenter");
+        try {
+            groundOperationsPort.getClass().getMethod("receive", BulkyBaggageDeskReceipt.class).invoke(groundOperationsPort, bulkyBaggageDeskReceipt);
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
     }
 }
