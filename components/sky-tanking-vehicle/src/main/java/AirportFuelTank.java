@@ -1,5 +1,3 @@
-package main;
-
 public class AirportFuelTank {
     private int amount = 100000;
 
@@ -18,7 +16,10 @@ public class AirportFuelTank {
     }
 
     public int refill(int pAmount) {
-        amount += pAmount;
+        if(amount+pAmount<100000) {
+            amount += pAmount;
+            return amount;
+        }
         return amount;
     }
 }

@@ -1,14 +1,9 @@
-package test;
-
-import org.junit.Before;
 import org.junit.Test;
+import static junit.framework.TestCase.*;
+
+public class SkyTankingVehicleTest{
 
 
-public class SkyTankingVehicleTest {
-    @Before
-    public void init() {
-
-    }
     @Test
     public void doTest(){
 

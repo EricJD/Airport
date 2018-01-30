@@ -1,5 +1,3 @@
-package main;
-
 public class SkyTankingVehicle {
     private static SkyTankingVehicle instance = new SkyTankingVehicle();
     public Port port;
@@ -7,7 +5,7 @@ public class SkyTankingVehicle {
     public static SkyTankingVehicle getInstance() {return instance;}
 
     private boolean isConnected = false;
-    private FuelPump fuelPump;
+    private FuelPump fuelPump = new FuelPump();
     private int totalAmount;
 
     public class Port implements ISkyTankingVehicle {
@@ -31,7 +29,7 @@ public class SkyTankingVehicle {
 
     //Logic
 
-    private boolean innerMethodConnect(FuelPump pFuelPump, AirportFuelTank pAirportFuelTank) {
+    public boolean innerMethodConnect(FuelPump pFuelPump, AirportFuelTank pAirportFuelTank) {
         fuelPump = pFuelPump;
         AirportFuelTank airportFuelTank = new AirportFuelTank();
         airportFuelTank = pAirportFuelTank;
@@ -40,12 +38,13 @@ public class SkyTankingVehicle {
         return isConnected;
     }
 
-    private void innerMethodPump(FuelTank fuelTank, int amount) {
+    public void innerMethodPump(FuelTank fuelTank, int amount) {
+        fuelPump.pump(amount);
         fuelTank.refill(amount);
 
     }
 
-    private FuelReceipt innerMethodPrint() {
+    public FuelReceipt innerMethodPrint() {
         FuelReceipt receipt = new FuelReceipt();
         System.out.println("---main.FuelReceipt---");
         System.out.println("Date: " + receipt.getDate_time());
@@ -54,7 +53,8 @@ public class SkyTankingVehicle {
         return receipt;
     }
 
-    private void innerMethodNotifyGroundOperations(FuelReceipt fuelReceipt) {
-
+    public void innerMethodNotifyGroundOperations(FuelReceipt fuelReceipt) {
+        GroundOperationsCenter groundOperationsCenter = new GroundOperationCenter();
+        groundOperationsCenter.recieve(fuelReceipt);
     }
 }

@@ -1,5 +1,3 @@
-package main;
-
 public interface ISkyTankingVehicle {
 
     boolean connect(FuelPump fuelPump, AirportFuelTank airportFuelTank);

@@ -1,5 +1,3 @@
-package main;
-
 public class FuelPump {
 
     private boolean isOn = false;
@@ -9,6 +7,7 @@ public class FuelPump {
     public boolean off() { return isOn = false; }
 
     public void pump(int pAmount) {
-
+        AirportFuelTank t = new AirportFuelTank();
+        t.takeOut(pAmount);
     }
 }
