@@ -29,5 +29,6 @@
         <module>components/boarding-control</module>
         <module>components/push-back-vehicle</module>
         <module>components/ground-operations-center</module>
+        <module>components/base</module>
     </modules>
 </project>
