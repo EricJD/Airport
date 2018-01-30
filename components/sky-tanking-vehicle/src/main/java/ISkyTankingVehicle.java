@@ -1,3 +1,5 @@
+import dummy.FuelTank;
+
 public interface ISkyTankingVehicle {
 
     boolean connect(FuelPump fuelPump, AirportFuelTank airportFuelTank);

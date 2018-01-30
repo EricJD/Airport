@@ -1,3 +1,6 @@
+import dummy.FuelTank;
+//Dummy imports remove for complete build
+
 public class SkyTankingVehicle {
     private static SkyTankingVehicle instance = new SkyTankingVehicle();
     public Port port;
@@ -54,7 +57,7 @@ public class SkyTankingVehicle {
     }
 
     public void innerMethodNotifyGroundOperations(FuelReceipt fuelReceipt) {
-        GroundOperationsCenter groundOperationsCenter = new GroundOperationCenter();
-        groundOperationsCenter.recieve(fuelReceipt);
+        //GroundOperationsCenter groundOperationsCenter = new GroundOperationsCenter();
+        //groundOperationsCenter.recieve(fuelReceipt);
     }
 }
