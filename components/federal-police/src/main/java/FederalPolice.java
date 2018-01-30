@@ -1,5 +1,6 @@
 import base.*;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 public class FederalPolice {
@@ -88,7 +89,14 @@ public class FederalPolice {
     }
 
     void innerMethodNotifyGroundOperations(FederalPoliceReceipt federalPoliceReceipt) {
-
+        Object componentPort;
+        componentPort = ComponentLoader.loadComponent("ground-operations-center","GroundOperationsCenter");
+        try {
+            Method onMethod = componentPort.getClass().getDeclaredMethod("receive",FederalPoliceReceipt.class);
+            onMethod.invoke(componentPort,federalPoliceReceipt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

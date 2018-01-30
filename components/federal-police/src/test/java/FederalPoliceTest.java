@@ -58,12 +58,4 @@ public class FederalPoliceTest {
         SpecialGood specialGood = new SpecialGood(SpecialGoodType.DangerousGoods);
         assertFalse(FederalPolice.getInstance().innerMethodInspectMunition(specialGood));
     }
-
-    @Test
-    public void testInnerMethodKeepSafe() {
-    }
-
-    @Test
-    public void testInnerMethodNotifyGroundOperations() {
-    }
 }
